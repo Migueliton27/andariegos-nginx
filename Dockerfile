@@ -1,6 +1,7 @@
 FROM nginx:alpine
+ARG NGINX_CONF=nginx.conf
 
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY ${NGINX_CONF} /etc/nginx/nginx.conf
 
 RUN mkdir -p /var/log/nginx
 
